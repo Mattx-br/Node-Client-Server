@@ -1,0 +1,7 @@
+
+Creating a express application
+$ express --ejs client-server
+
+installing Restfy, a node webServices
+$ npm install restfy-clients --save
+
