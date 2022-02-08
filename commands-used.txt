@@ -1,7 +1,11 @@
+to this project you will need the restful api project and user management project
+on github.com/Mattx-br you have CRUD-user and Restful to use 
+
+resftul project will be the server and the client-server will be the client, to access the server throw the client you will need to turn on both
 
 Creating a express application
 $ express --ejs client-server
 
 installing Restfy, a node webServices
-$ npm install restfy-clients --save
+$ npm install restify-clients --save
 
