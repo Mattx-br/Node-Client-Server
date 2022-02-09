@@ -80,7 +80,7 @@ class User {
 
     static getUsers() {
 
-        return HttpRequest.get('/users');
+        return Fetch.get('/users');
 
     }
 

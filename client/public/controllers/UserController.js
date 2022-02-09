@@ -51,7 +51,7 @@ class UserController {
 
                     user.loadFromJSON(result);
 
-                    User.save().then(user => {
+                    user.save().then(user => {
 
                         this.getTr(user, tr);
 
