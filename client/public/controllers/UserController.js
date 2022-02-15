@@ -156,7 +156,8 @@ class UserController {
 
         let user = {};
         let isValid = true;
-
+        let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+        let result = userCheck.test(username);
         [...formEl.elements].forEach(function(field, index) {
 
             if (['name', 'email', 'password'].indexOf(field.name) > -1 && !field.value) {

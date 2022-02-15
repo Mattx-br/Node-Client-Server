@@ -1,0 +1,3 @@
+validar o campo nome para n ter sql injections (user regex)
+
+mesma coisa com o do email (regex)
