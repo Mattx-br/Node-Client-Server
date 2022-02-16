@@ -87,7 +87,16 @@ class UserController {
 
             let values = this.getValues(this.formEl);
 
-            if (!values) return false;
+            if (!values) {
+
+                setTimeout(() => {
+
+                }, 3000);
+                alert("Dados inválidos");
+                btn.disabled = false;
+                return false
+
+            };
 
             this.getPhoto(this.formEl).then(
                 (content) => {
@@ -156,14 +165,22 @@ class UserController {
 
         let user = {};
         let isValid = true;
-        let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
-        let result = userCheck.test(username);
+        let userCheck = /,/i;
+        let name = formEl.name.value;
+        name[0].match(userCheck);
+        isValid = name[0].match(userCheck) || name[0].match(/./i) ? false : true;
         [...formEl.elements].forEach(function(field, index) {
 
             if (['name', 'email', 'password'].indexOf(field.name) > -1 && !field.value) {
 
                 field.parentElement.classList.add('has-error');
-                isValid = false;
+
+                setTimeout(() => {
+
+                }, 3000);
+                alert("Dados inválidos");
+                btn.disabled = false;
+                return false
 
             }
 
